@@ -1,0 +1,12 @@
+[Unit]
+Description=streletz-kpp.service
+After=network-online.target
+ 
+[Service]
+ 
+ExecStart=/bin/bash '/opt/ultima-activation/ultima-vmc-streletz-kpp.sh'
+Type=forking
+ 
+[Install]
+WantedBy=multi-user.target
+Alias=bash.service
